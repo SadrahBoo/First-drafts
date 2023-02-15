@@ -1,0 +1,105 @@
+<nav id="topNav">
+  <ul>
+    <li> <a href="index.html">Home</a> </li>
+    <li> <a href="mission.html">Our Mission</a> </li>
+    <li> <a href="about.html">About the Designer</a> </li>
+    <li> <a href="glossary.html">Glossary</a> </li>
+    <li> <a href="exploration.html":>Exploration</a> </li> 
+  </ul>
+</nav> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sadrah Mohammed Ali">
+<title>Insert Title for this Page Here</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Explorations in Gaming</h1>
+  <ul>
+    <li> <a href="#board"> Board Game Exploration</h2>
+    <<li> <a href="#video"> Video Game Exploration</h2>
+  </ul>
+  <h2 id="board">Board Game Exploration</h2>
+  <img src="game-main/boardgame.png" alt="Board Game Stuff">
+  <p>cThese are the ideas and the board game pieces. Our board game involved around warfare. Here is the steps:
+  At beginning of game: Each player starts at one corner of the board; pieces of artillery placed randomly.
+Does not matter where you go; you just try to have your colored artillery on the board. During the Game: Roll the die.
+Pick whichever way you want to go. Whether you land on a square or star, you do something. Objective of Game: 
+Be the last person standing; (your artillery is last to leave).
+</p>
+   <img src="Boardgameitself.png" alt="Board for game">
+  <p>The empty board where the game is in, if you go back to the previous photo, there is a key to help you understand what each key resemmbles. </p>
+  
+  <h2 id="video"> Video Game Exploration</h2>
+  <img src="character_before.png.png" alt="The character for the game">
+  <p>This is my character for the original clicking game. In the game you try to click on the character, in this case the 
+    image of the water-droplet like thingie above.</p>
+  </br>
+  
+  <h3> ANother code for another game coding activity</h3>
+  <pre>
+  from random import randint
+WIDTH = 600
+HEIGHT = 400
+score = 0
+game_over = False
+hedgehog = Actor("hedgehog")
+hedgehog.pos = 100, 100
+
+coin = Actor("coin")
+coin.pos = 200, 200
+
+def draw():
+    screen.blit('background', (0, 0))
+    hedgehog.draw()
+    coin.draw()
+    screen.draw.text("Score: " + str(score), color="black", topleft=(10,10))
+
+    if game_over:
+        screen.fill("pink")
+        screen.draw.text("Final Score: " + str(score), topleft=(10, 10), fontsize=60)
+
+def place_coin():
+    coin.x = randint(20, (WIDTH - 20))
+    coin.y = randint(20, (HEIGHT - 20))
+
+def time_up():
+    global game_over
+    game_over = True
+
+def update():
+    global score
+
+    if keyboard.left:
+        hedgehog.x = hedgehog.x - 7
+    elif keyboard.right:
+        hedgehog.x = hedgehog.x + 7
+    elif keyboard.up:
+        hedgehog.y = hedgehog.y - 7
+    elif keyboard.down:
+        hedgehog.y = hedgehog.y +
+
+
+    coin_collected = hedgehog.colliderect(coin)
+
+
+    if coin_collected:
+        score = score + 10
+        place_coin()
+
+
+clock.schedule(time_up, 45.0)
+place_coin()
+  </pre>
+  
+  <h3>Result</h3>
+  <img src="image0.jpeg" alt="Final result">
+  <p>This is the result from the code placed above that I followed and modified in my own way.</p>
+  </body>
+</html>
+
